@@ -1,0 +1,25 @@
+{
+  "name": "linkedin-referral-cloud-bot",
+  "version": "1.0.0",
+  "description": "24/7 Real-Time Cloud LinkedIn Auto-Referral Bot for Software Engineers",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "scan": "node index.js --once",
+    "test": "node test/cloud_bot.test.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "node-cron": "^3.0.3",
+    "playwright": "^1.42.1"
+  },
+  "keywords": [
+    "linkedin",
+    "referral",
+    "bot",
+    "automation",
+    "playwright"
+  ],
+  "author": "Antigravity",
+  "license": "MIT"
+}
