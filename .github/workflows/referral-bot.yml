@@ -2,8 +2,8 @@ name: LinkedIn 24/7 Auto-Referral Bot
 
 on:
   schedule:
-    - cron: '0 9,21 * * *'  # Runs twice daily at 9 AM & 9 PM UTC
-  workflow_dispatch:        # Manual 1-click trigger button in GitHub Actions
+    - cron: '*/5 * * * *'  # Runs every 5 minutes 24/7
+  workflow_dispatch:
 
 jobs:
   referral-bot-scan:
@@ -26,7 +26,7 @@ jobs:
       - name: Execute LinkedIn Referral Scan
         env:
           LINKEDIN_LI_AT_COOKIE: ${{ secrets.LINKEDIN_LI_AT_COOKIE }}
-          POLL_INTERVAL_MINUTES: 120
+          POLL_INTERVAL_MINUTES: 5
           DAILY_MESSAGE_LIMIT: 15
           SAFETY_DELAY_MIN_SEC: 30
           SAFETY_DELAY_MAX_SEC: 60
